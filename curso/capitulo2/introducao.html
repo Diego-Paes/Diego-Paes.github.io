@@ -5,65 +5,67 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Curso Desenvolvimento Web</title>
 <style>
-  body {
+  
+  html, body {
+    height: 100%;
     margin: 0;
     font-family: Arial, sans-serif;
   }
 
-  
-  header {
+  header, footer {
     background-color: gray;
     color: white;
+    padding: 10px 15px;
     font-weight: bold;
+  }
+
+  header {
     font-size: 20px;
-    padding: 5px 10px;
+  }
+
+  footer {
+    font-weight: normal;
+    font-size: 18px;
   }
 
   
   .container {
     display: flex;
-    height: 100vh;
+    height: calc(100vh - 60px - 40px);
     border-left: 1px solid black;
   }
 
-  
   nav {
     width: 200px;
-    background-color: gray;
+    background-color: transparent;
     display: flex;
     flex-direction: column;
+    padding: 0;
   }
 
   nav a {
     color: black;
     text-decoration: none;
     font-weight: bold;
-    padding: 15px 10px;
-    border-bottom: 1px solid #ccc;
+    padding: 20px 15px;
+    background-color: gray;
+    border-bottom: 1px solid black;
     display: block;
+    box-sizing: border-box;
   }
 
   nav a:hover {
     background-color: #b0b0b0;
   }
 
-  
   main {
     flex-grow: 1;
     padding: 15px 25px;
+    overflow-y: auto; /* scroll interno se conteúdo for maior que área */
   }
 
   main h3 {
     margin-top: 0;
-  }
-
-  
-  footer {
-    background-color: gray;
-    color: white;
-    font-weight: normal;
-    padding: 5px 10px;
-    font-size: 18px;
   }
 </style>
 </head>
@@ -75,20 +77,20 @@
   <div class="container">
     <nav>
       <a href="home.html">Página Principal</a>
-      <a href="sumario.html">Sumário</a>
+      <a href="#">Sumário</a>
       <a href="#">Contato</a>
       <a href="#">Sobre</a>
     </nav>
 
     <main>
       <h3><strong>Lorem Ipsum</strong></h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Nulla</strong> in nunc neque. In in leo pretium, dictum purus eu, sodales metus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus efficitur et tellus sed aliquet. Quisque pretium massa vitae quam accumsan dictum efficitur non arcu. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer molestie ex faucibus, lacinia tortor quis, eleifend est. Duis eget feugiat nunc. Suspendisse imperdiet ex vel lorem tincidunt elementum. Aenean turpis turpis, maximus vel neque eu, faucibus malesuada ipsum. Phasellus arcu sem, mollis bibendum enim sollicitudin, rhoncus posuere ipsum. Suspendisse lacus purus, varius in cursus eget, faucibus pellentesque velit.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in nunc neque. In in leo pretium, dictum purus eu, sodales metus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus efficitur et tellus sed aliquet. Quisque pretium massa vitae quam accumsan dictum efficitur non arcu. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer molestie ex faucibus, lacinia tortor quis, eleifend est. Duis eget feugiat nunc. Suspendisse imperdiet ex vel lorem tincidunt elementum. Aenean turpis turpis, maximus vel neque eu, faucibus malesuada ipsum. Phasellus arcu sem, mollis bibendum enim sollicitudin, rhoncus posuere ipsum. Suspendisse lacus purus, varius in cursus eget, faucibus pellentesque velit.</p>
       
       <p>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec in suscipit eros, vel vulputate lectus. In lacinia tempor elit id mattis. Morbi sed commodo felis, ac rutrum tellus. Nullam facilisis metus non laoreet hendrerit. Vestibulum laoreet vehicula lorem. Nunc lectus metus, imperdiet sed rutrum vitae, feugiat eu neque. Duis aliquam neque laoreet enim fermentum porttitor.</p>
 
       <p>Fusce id blandit velit. Aliquam eleifend mollis nulla ut sollicitudin. Donec ac consequat ante, nec rhoncus leo. Vivamus in dui ut est dapibus sollicitudin. Morbi mi neque, suscipit et placerat eu, porttitor eget tortor. Donec ullamcorper, nisl sed dictum dignissim, dolor ligula convallis orci, nec egestas neque purus id dolor. Nam in euismod orci.</p>
 
-      <p>Proin sed tincidunt leo. Fusce rhoncus mauris et turpis interdum pharetra. Praesent sollicitudin mauris dapibus sem malesuada tempor. Etiam at facilisis nisl, at viverra mi. Nullam tellus nibh, gravida eu viverra id, pellentesque ac risus. Nam ante risus, lobortis at ante vel, blandit mattis <strong>neque</strong>. Vestibulum at pulvinar lectus. Ut vehicula ante sagittis nibh facilisis rhoncus tincidunt a diam. Donec nec faucibus erat. Duis sit amet ipsum erat. Fusce porttitor massa tortor, et finibus mauris egestas at. Phasellus vitae aliquam orci. Sed tortor purus, fermentum eget lacus quis, malesuada molestie purus.</p>
+      <p>Proin sed tincidunt leo. Fusce rhoncus mauris et turpis interdum pharetra. Praesent sollicitudin mauris dapibus sem malesuada tempor. Etiam at facilisis nisl, at viverra mi. Nullam tellus nibh, gravida eu viverra id, pellentesque ac risus. Nam ante risus, lobortis at ante vel, blandit mattis neque. Vestibulum at pulvinar lectus. Ut vehicula ante sagittis nibh facilisis rhoncus tincidunt a diam. Donec nec faucibus erat. Duis sit amet ipsum erat. Fusce porttitor massa tortor, et finibus mauris egestas at. Phasellus vitae aliquam orci. Sed tortor purus, fermentum eget lacus quis, malesuada molestie purus.</p>
 
       <p>Sed aliquam elit id diam ornare, sed egestas dui dapibus. Aenean vestibulum est id purus vestibulum finibus. Duis eget tortor lorem. Duis bibendum mauris nisi, id lacinia neque convallis non. Praesent cursus felis eget tellus tempus, at porttitor libero sodales. Fusce commodo mattis purus quis luctus. Donec tortor tortor, rutrum convallis felis sit amet, pellentesque tempor sem. Donec hendrerit, eros vel pretium molestie, magna augue cursus velit, feugiat elementum neque erat ac lectus. Morbi quis lacus nisl. Ut auctor ex et ornare sagittis. Cras ut magna finibus, aliquam orci sit amet, dignissim libero. Praesent urna orci, elementum vitae volutpat eget, imperdiet a neque. Etiam ac sem in felis imperdiet cursus sed eget dui. Vestibulum eu nisi a ante aliquet pretium.</p>
     </main>
